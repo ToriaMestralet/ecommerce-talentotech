@@ -79,7 +79,8 @@
 
   // SweetAlert al finalizar compra
   function finalizarCompra() {
-    Swal.fire({
+   alert("Tu compra fue realizada con exito!");
+    /*Swal.fire({
       title: '¡Compra realizada!',
       text: 'Gracias por tu compra. Tu pedido está en proceso.',
       icon: 'success',
@@ -88,7 +89,7 @@
       // Vaciar carrito después de la compra
       localStorage.removeItem('cart');
       loadCart();
-    });
+    });*/
   }
 
   // Agregar evento al botón de finalizar compra
