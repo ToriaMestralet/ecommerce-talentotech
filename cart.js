@@ -19,7 +19,7 @@
       card.classList.add('minicard_carrito');
 
       card.innerHTML = `
-        <img src="${product.image}" alt="${product.title}">
+        <img src="${product.image}" alt="${product.title}" style = "maxWidth:60px">
         <div class="datos_minicard">
           <h4>${product.title}</h4>
         </div>
