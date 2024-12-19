@@ -1,4 +1,4 @@
-src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+<src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
 <script>
   // Función para cargar el carrito desde localStorage
   function loadCart() {
