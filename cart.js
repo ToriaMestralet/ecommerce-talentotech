@@ -1,8 +1,14 @@
-//<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"/> <!-- SweetAlert -->
+ src="https://cdn.jsdelivr.net/npm/sweetalert2@11"
   // Función para cargar el carrito desde localStorage
   function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const carritoProductos = document.getElementById('carrito_productos');
+
+    // Verificar que el contenedor exista
+    if (!carritoProductos) {
+      console.error('Contenedor del carrito no encontrado.');
+      return;
+    }
 
     // Limpiar contenido previo
     carritoProductos.innerHTML = '';
@@ -32,6 +38,13 @@
   function updateSubtotal(cart) {
     const subtotal = cart.reduce((sum, product) => sum + parseFloat(product.price.replace('$', '')), 0);
     const subtotalElement = document.querySelector('.subtotal_carrito h2');
+
+    // Verificar que el elemento exista
+    if (!subtotalElement) {
+      console.error('Elemento de subtotal no encontrado.');
+      return;
+    }
+
     subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
   }
 
@@ -41,6 +54,13 @@
     const envio = 50; // Precio fijo del envío
     const total = subtotal + envio;
     const totalElement = document.querySelector('.total_carrito h1');
+
+    // Verificar que el elemento exista
+    if (!totalElement) {
+      console.error('Elemento de total no encontrado.');
+      return;
+    }
+
     totalElement.textContent = `$${total.toFixed(2)}`;
   }
 
@@ -71,7 +91,12 @@
   }
 
   // Agregar evento al botón de finalizar compra
-  document.querySelector('.btn_primario').addEventListener('click', finalizarCompra);
+  const btnFinalizar = document.querySelector('.btn_primario');
+  if (btnFinalizar) {
+    btnFinalizar.addEventListener('click', finalizarCompra);
+  } else {
+    console.error('Botón de finalizar compra no encontrado.');
+  }
 
   // Agregar evento para eliminar producto
   document.addEventListener('click', (event) => {
