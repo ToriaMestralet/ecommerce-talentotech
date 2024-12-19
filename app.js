@@ -23,7 +23,9 @@
       card.innerHTML = `
         <a href="producto.html"><img src="${product.image}" alt="${product.title}"></a>
         <p>${product.title}</p>
-        <p>$${product.price.toFixed(2)}</p>;
+        <p>$${product.price.toFixed(2)}</p>
+
+`;
 
       slider.appendChild(card);
     });
