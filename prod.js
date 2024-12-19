@@ -38,3 +38,41 @@
   } else {
     console.error('No se encontró el ID del producto en la URL.');
   }
+
+  // Función para añadir producto al carrito
+  function addToCart(product) {
+    // Obtener carrito actual del localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Agregar el producto al carrito
+    cart.push(product);
+
+    // Guardar carrito actualizado en localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirigir al carrito
+    window.location.href = "overlay-carrito.html";
+  }
+
+  // Agregar evento a los botones "Comprar" y "Añadir al carrito"
+  document.querySelector('.btn_primario').addEventListener('click', () => {
+    const product = {
+      id: getQueryParam('id'),
+      image: document.querySelector('.producto_central img').src,
+      title: document.querySelector('.producto_datos h2').textContent,
+      price: document.querySelector('.producto_datos h1').textContent,
+    };
+
+    addToCart(product);
+  });
+
+  document.querySelector('.btn_secundario').addEventListener('click', () => {
+    const product = {
+      id: getQueryParam('id'),
+      image: document.querySelector('.producto_central img').src,
+      title: document.querySelector('.producto_datos h2').textContent,
+      price: document.querySelector('.producto_datos h1').textContent,
+    };
+
+    addToCart(product);
+  });
