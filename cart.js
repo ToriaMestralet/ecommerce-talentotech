@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"/> <!-- SweetAlert -->
   // Función para cargar el carrito desde localStorage
   function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
