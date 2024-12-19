@@ -13,23 +13,25 @@
   }
 
   // Función para renderizar productos en la sección de cards
-  function renderProducts(products) {
-    const slider = document.querySelector('.slider'); // Contenedor de las cards
-    slider.innerHTML = ''; // Limpiar contenido existente
+function renderProducts(products) {
+  const slider = document.querySelector('.slider'); // Contenedor de las cards
+  slider.innerHTML = ''; // Limpiar contenido existente
 
-    products.forEach((product) => {
-      const card = document.createElement('div');
-      card.classList.add('card_producto');
+  products.forEach((product) => {
+    const card = document.createElement('div');
+    card.classList.add('card_producto');
 
-      card.innerHTML = `
-        <a href="producto.html"><img src="${product.image}" alt="${product.title}"></a>
-        <p>${product.title}</p>
-        <p>$${product.price.toFixed(2)}</p>
-      `;
+    card.innerHTML = `
+      <a href="producto.html?id=${product.id}">
+        <img src="${product.image}" alt="${product.title}">
+      </a>
+      <p>${product.title}</p>
+      <p>$${product.price.toFixed(2)}</p>
+    `;
 
-      slider.appendChild(card);
-    });
-  }
+    slider.appendChild(card);
+  });
+}
 
   // Llamada inicial para cargar productos
   fetchProducts();
