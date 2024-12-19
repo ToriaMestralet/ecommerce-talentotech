@@ -39,105 +39,74 @@
     </header>
 
     <main>
-        <section id="fondo_carrito">
-            <div id="modal_carrito">
-                <!--icon cerrar-->
-                <a href="index.html" class="icon_cerrar">X</a>
-                <h2 class="titulo_modal">Carrito de compras</h2>
-                <!--divider-->
-                <div class="divisor"></div>
+        <section id="fondo_carrito">
+       <div id="modal_carrito">
+    <!--icon cerrar-->
+    <a href="index.html" class="icon_cerrar">X</a>
+    <h2 class="titulo_modal">Carrito de compras</h2>
+    <div class="divisor"></div>
 
-                <div class="subtitulo_carrito">
-                    <h4>Producto</h4>
-                    <h4>Subtotal</h4>
-                </div>
+    <div class="subtitulo_carrito">
+        <h4>Producto</h4>
+        <h4>Subtotal</h4>
+    </div>
+    <div class="divisor"></div>
 
-                <!--divider-->
-                <div class="divisor"></div>
+    <!-- Contenedor dinámico para minicards -->
+    <div id="carrito_productos">
+        <!-- Aquí se generarán las minicards dinámicamente -->
+    </div>
 
-                <div class="minicard_carrito">
-                    <!--mini card producto carrito-->
-                    <img src="https://picsum.photos/100" alt="">
-                    <div class="datos_minicard">
-                        <h4>Nombre de plantita</h4>
-                    <!--componente +/- -->
-                    </div>
-                    <h3>$Precio</h3>
-                    <!--icon eliminar-->
-                </div>
+    <div class="divisor"></div>
 
-                <!--divider-->
-                <div class="divisor"></div>
+    <div class="subtotal_carrito">
+        <div class="subtotal_izq">
+            <h4>Subtotal</h4>
+            <p>(sin envio)</p>
+        </div>
+        <h2>$0.00</h2>
+    </div>
+    <div class="divisor"></div>
 
-                <div class="subtotal_carrito">
-                    <div class="subtotal_izq">
-                        <h4>Subtotal</h4>
-                        <p>(sin envio)</p>
-                    </div>
-                    <h2>$Precio</h2>
-                </div>
+    <!-- Todo lo demás sigue igual -->
+    <div class="entrega_carrito">
+        <div class="entrega_izq">
+            <p>Entrega para CP: </p>
+            <h5>XXXX</h5>
+        </div>
+        <a href="">Cambiar CP</a>
+    </div>
 
-                <!--divider-->
-                <div class="divisor"></div>
-
-                <div class="entrega_carrito">
-                    <div class="entrega_izq">
-                        <p>Entrega para CP: </p>
-                        <h5> XXXX</h5>
-                    </div>
-                    <a href="">Cambiar CP</a>
-                </div>
-
-                <div class="card_envio_carrito">
-                    <!--card envio-->
-                    <div class="superior_envio">
-                        <!--icon domicilio-->
-                        <h4>Envío a domicilio</h4>
-                    </div>
-                    <div class="opcion_envio">
-                        <input type="radio">
-                        <div class="opcion_contenido">
-                            <h5>Lorem ipsum dolor sit amet, </h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac egestas velit. Nam a tempus
-                            ligula. </p>
-                        </div>
-                        <h4>$$$$</h4>
-                    </div>
-                </div>
-
-                <div class="card_envio_carrito">
-                    <div class="superior_envio">
-                        <!--icon retiro-->
-                        <h4>Puntos de retiro</h4>
-                    </div>
-                    <div class="opcion_envio">
-                    <input type="radio">
-                    <div class="opcion_contenido">
-                    <h5>Lorem ipsum dolor sit amet, </h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac egestas velit. Nam a tempus
-                        ligula. </p>
-                    </div>
-                    <h4>$$$$</h4>
-                </div>
-                </div>
-
-                <!--divider-->
-                <div class="divisor"></div>
-
-                <div class="total_carrito">
-                    <div class="linea_total_carrito">
-                        <h2>Total</h2>
-                    <h1>$$$$$</h1>
-                    </div>
-                    <h5>O hasta x cuotas sin interes de XXXXX</h5>
-                </div>
-
-                <div class="botones_compra">
-                    <a href="index.html">Ver mas productos</a>
-                <button class="btn_primario">Iniciar compra</button>
-                </div>
-                
+    <div class="card_envio_carrito">
+        <div class="superior_envio">
+            <h4>Envío a domicilio</h4>
+        </div>
+        <div class="opcion_envio">
+            <input type="radio">
+            <div class="opcion_contenido">
+                <h5>Lorem ipsum dolor sit amet, </h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac egestas velit. Nam a tempus
+                    ligula. </p>
             </div>
+            <h4>$$$$</h4>
+        </div>
+    </div>
+    <!-- Repite lo mismo para otros métodos de envío -->
+    <div class="divisor"></div>
+
+    <div class="total_carrito">
+        <div class="linea_total_carrito">
+            <h2>Total</h2>
+            <h1>$0.00</h1>
+        </div>
+        <h5>O hasta x cuotas sin interés de XXXXX</h5>
+    </div>
+
+    <div class="botones_compra">
+        <a href="index.html">Ver más productos</a>
+        <button class="btn_primario">Iniciar compra</button>
+    </div>
+</div>
 
         </section>
     </main>
