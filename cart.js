@@ -38,6 +38,7 @@
   function updateSubtotal(cart) {
     const subtotal = cart.reduce((sum, product) => sum + parseFloat(product.price.replace('$', '')), 0);
     const subtotalElement = document.querySelector('.subtotal_carrito h2');
+   printLn("tengo subtotal");
 
     // Verificar que el elemento exista
     if (!subtotalElement) {
