@@ -678,6 +678,9 @@ border: none;
     justify-self: end;
     font-size: 3rem;
 }
+.minicard_carrito img{
+    max-width: 60px;
+}
 
 .subtotal_carrito, .entrega_carrito{
     display: flex; 
