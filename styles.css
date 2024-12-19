@@ -644,6 +644,10 @@ border: none;
     display: flex;
     flex-direction: column;
 }
+
+#carrito_productos img{
+    max-width: 60px !important;
+}
 .icon_cerrar{
     font-family: sans-serif;
     font-weight: 700;
