@@ -1,11 +1,11 @@
 
-  // Función para obtener los parámetros de la URL
+  //parámetros de la URL
   function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
 
-  // Función para obtener detalles de un producto
+  //detalles del producto
   async function fetchProductDetails(productId) {
     try {
       const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
@@ -17,7 +17,7 @@
     }
   }
 
-  // Función para mostrar los detalles del producto
+  //mostrar detalles del producto
   function displayProductDetails(product) {
     const productImage = document.querySelector('.producto_central img');
     const productTitle = document.querySelector('.producto_datos h2');
@@ -31,7 +31,7 @@
     productDescription.textContent = product.description;
   }
 
-  // Obtener ID del producto y cargar detalles
+  //obtener ID del producto y cargar detalles
   const productId = getQueryParam('id');
   if (productId) {
     fetchProductDetails(productId);
@@ -39,22 +39,22 @@
     console.error('No se encontró el ID del producto en la URL.');
   }
 
-  // Función para añadir producto al carrito
+  //añadir producto al carrito
   function addToCart(product) {
-    // Obtener carrito actual del localStorage
+    //obtener carrito del localStorage
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Agregar el producto al carrito
+    //agregar el producto al carrito
     cart.push(product);
 
-    // Guardar carrito actualizado en localStorage
+    //guardar carrito actualizado
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Redirigir al carrito
+    //redirigir al carrito
     window.location.href = "overlay-carrito.html";
   }
 
-  // Agregar evento a los botones "Comprar" y "Añadir al carrito"
+  //evento en los botones "Comprar" y "Añadir al carrito"
   document.querySelector('.btn_primario').addEventListener('click', () => {
     const product = {
       id: getQueryParam('id'),
