@@ -66,7 +66,7 @@
   }
 
   //eliminar un producto del carrito
-  function deleteFromCart(index) {
+  function eliminarProducto(index) {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.splice(index, 1);
 
@@ -104,7 +104,7 @@
   document.addEventListener('click', (event) => {
     if (event.target.classList.contains('btn_eliminar')) {
       const index = event.target.dataset.index;
-      deleteFromCart(index);
+      eliminarProducto(index);
     }
   });
 
